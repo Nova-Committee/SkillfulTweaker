@@ -8,7 +8,7 @@ version = '1.0.0'
 def mcVersion = "1.12.2"
 
 java {
-    archivesBaseName = 'SkillfulTweaker-Forge-1.12.2'
+    archivesBaseName = 'SkillfulTweaker-Forge-CRT-1.12.2'
     toolchain.languageVersion = JavaLanguageVersion.of(8)
 }
 
