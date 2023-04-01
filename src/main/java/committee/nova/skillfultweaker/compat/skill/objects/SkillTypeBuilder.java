@@ -1,6 +1,7 @@
 package committee.nova.skillfultweaker.compat.skill.objects;
 
 import committee.nova.skillful.impl.skill.SkillBuilder;
+import committee.nova.skillfultweaker.compat.funcs.ILevelRequiredXp;
 import crafttweaker.annotations.ZenRegister;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.BossInfo;
@@ -24,6 +25,12 @@ public class SkillTypeBuilder {
     @ZenMethod
     public SkillTypeBuilder setMaxLevel(int maxLevel) {
         builder.setMaxLevel(maxLevel);
+        return this;
+    }
+
+    @ZenMethod
+    public SkillTypeBuilder setLevelRequiredXp(ILevelRequiredXp required) {
+        builder.setLevelRequiredXP(required::getRequired);
         return this;
     }
 
